@@ -41,8 +41,13 @@ return [
             'provider' => 'users',
         ],
 
+//        'api' => [
+//            'driver' => 'token',
+//            'provider' => 'api-users',
+//        ],
+        
         'api' => [
-            'driver' => 'token',
+            'driver' => 'passport',
             'provider' => 'users',
         ],
     ],
@@ -74,6 +79,11 @@ return [
             'driver' => 'ldap', // Was 'eloquent'.
             'model'  => App\User::class,
         ],
+        
+        'api-users' => [
+            'driver' => 'eloquent', 
+            'model'  => App\User::class,
+        ]
     ],
 
     /*

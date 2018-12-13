@@ -13,11 +13,11 @@ return [
     |
     */
 
-    'failed' => 'These credentials do not match our records.',
-    'throttle' => 'Too many login attempts. Please try again in :seconds seconds.',
-    'app_is_requesting_permission' => '<strong>:name</strong> is requesting permission to access your account.',
-    'app_scopes' => 'This application will be able to:',
-    'authorize' => 'Authorize',
-    'cancel' => 'Cancel'
+    'failed' => 'Estas credenciales no coinciden con nuestros registros.',
+    'throttle' => 'Demasiados intentos de inicio de sesión. Por favor, intentelo de nuevo en: :seconds segundos.',
+    'app_is_requesting_permission' => '<strong>:name</strong> está solicitando permiso para acceder a su cuenta.',
+    'app_scopes' => 'Esta aplicación podrá:',
+    'authorize' => 'Autorizar',
+    'cancel' => 'Cancelar'
     
 ];
