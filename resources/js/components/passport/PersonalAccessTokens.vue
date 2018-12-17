@@ -11,11 +11,11 @@
                 <div class="card-header">
                     <div style="display: flex; justify-content: space-between; align-items: center;">
                         <span>
-                            Personal Access Tokens
+                            <i>Tokens</i> de acceso personales
                         </span>
 
                         <a class="action-link" tabindex="-1" @click="showCreateTokenForm">
-                            Create New Token
+                            Crear nuevo token
                         </a>
                     </div>
                 </div>
@@ -23,7 +23,7 @@
                 <div class="card-body">
                     <!-- No Tokens Notice -->
                     <p class="mb-0" v-if="tokens.length === 0">
-                        You have not created any personal access tokens.
+                        No has creado ningún <i>token</i> de acceso personal.
                     </p>
 
                     <!-- Personal Access Tokens -->
@@ -61,7 +61,7 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <h4 class="modal-title">
-                            Create Token
+                            Crear <i>Token</i>
                         </h4>
 
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
@@ -70,7 +70,7 @@
                     <div class="modal-body">
                         <!-- Form Errors -->
                         <div class="alert alert-danger" v-if="form.errors.length > 0">
-                            <p class="mb-0"><strong>Whoops!</strong> Something went wrong!</p>
+                            <p class="mb-0"><strong>¡Ups!</strong> ¡Algo fue mal!</p>
                             <br>
                             <ul>
                                 <li v-for="error in form.errors">
@@ -83,7 +83,7 @@
                         <form role="form" @submit.prevent="store">
                             <!-- Name -->
                             <div class="form-group row">
-                                <label class="col-md-4 col-form-label">Name</label>
+                                <label class="col-md-4 col-form-label">Nombre</label>
 
                                 <div class="col-md-6">
                                     <input id="create-token-name" type="text" class="form-control" name="name" v-model="form.name">
@@ -92,7 +92,7 @@
 
                             <!-- Scopes -->
                             <div class="form-group row" v-if="scopes.length > 0">
-                                <label class="col-md-4 col-form-label">Scopes</label>
+                                <label class="col-md-4 col-form-label">Ámbitos</label>
 
                                 <div class="col-md-6">
                                     <div v-for="scope in scopes">
@@ -113,10 +113,10 @@
 
                     <!-- Modal Actions -->
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
 
                         <button type="button" class="btn btn-primary" @click="store">
-                            Create
+                            Crear
                         </button>
                     </div>
                 </div>

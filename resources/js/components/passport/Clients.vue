@@ -10,11 +10,11 @@
             <div class="card-header">
                 <div style="display: flex; justify-content: space-between; align-items: center;">
                     <span>
-                        OAuth Clients
+                        Clientes OAuth
                     </span>
 
                     <a class="action-link" tabindex="-1" @click="showCreateClientForm">
-                        Create New Client
+                        Crear nuevo cliente
                     </a>
                 </div>
             </div>
@@ -22,17 +22,16 @@
             <div class="card-body">
                 <!-- Current Clients -->
                 <p class="mb-0" v-if="clients.length === 0">
-                    You have not created any OAuth clients.
+                    No has creado ningún cliente OAuth.
                 </p>
 
                 <table class="table table-borderless mb-0" v-if="clients.length > 0">
                     <thead>
                         <tr>
-                            <th>Client ID</th>
-                            <th>Name</th>
-                            <th>Secret</th>
-                            <th></th>
-                            <th></th>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Clave (Secret)</th>
+                            <th colspan="2">Acciones</th>
                         </tr>
                     </thead>
 
@@ -56,14 +55,14 @@
                             <!-- Edit Button -->
                             <td style="vertical-align: middle;">
                                 <a class="action-link" tabindex="-1" @click="edit(client)">
-                                    Edit
+                                    Editar
                                 </a>
                             </td>
 
                             <!-- Delete Button -->
                             <td style="vertical-align: middle;">
                                 <a class="action-link text-danger" @click="destroy(client)">
-                                    Delete
+                                    Eliminar
                                 </a>
                             </td>
                         </tr>

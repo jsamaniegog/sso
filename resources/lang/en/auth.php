@@ -18,6 +18,8 @@ return [
     'app_is_requesting_permission' => '<strong>:name</strong> is requesting permission to access your account.',
     'app_scopes' => 'This application will be able to:',
     'authorize' => 'Authorize',
-    'cancel' => 'Cancel'
-    
+    'cancel' => 'Cancel',
+    'unauthorized' => 'Unauthorized',
+    'scope_profile' => 'Get your user profile: name, surname and email.',
+    'scope_groups' => 'Get all the groups to which it belongs.'
 ];

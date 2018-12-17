@@ -6,45 +6,47 @@
 
 <template>
     <div>
-        <div v-if="tokens.length > 0">
-            <div class="card card-default">
-                <div class="card-header">Authorized Applications</div>
+        <div class="card card-default">
+            <div class="card-header">Aplicaciones autorizadas</div>
 
-                <div class="card-body">
-                    <!-- Authorized Tokens -->
-                    <table class="table table-borderless mb-0">
-                        <thead>
-                            <tr>
-                                <th>Name</th>
-                                <th>Scopes</th>
-                                <th></th>
-                            </tr>
-                        </thead>
+            <div class="card-body">
+                <p class="mb-0" v-if="tokens.length === 0">
+                    No hay aplicaciones autorizadas.
+                </p>
 
-                        <tbody>
-                            <tr v-for="token in tokens">
-                                <!-- Client Name -->
-                                <td style="vertical-align: middle;">
-                                    {{ token.client.name }}
-                                </td>
+                <!-- Authorized Tokens -->
+                <table class="table table-borderless mb-0" v-if="tokens.length > 0">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Ámbitos</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
 
-                                <!-- Scopes -->
-                                <td style="vertical-align: middle;">
-                                    <span v-if="token.scopes.length > 0">
-                                        {{ token.scopes.join(', ') }}
-                                    </span>
-                                </td>
+                    <tbody>
+                        <tr v-for="token in tokens">
+                            <!-- Client Name -->
+                            <td style="vertical-align: middle;">
+                                {{ token.client.name }}
+                            </td>
 
-                                <!-- Revoke Button -->
-                                <td style="vertical-align: middle;">
-                                    <a class="action-link text-danger" @click="revoke(token)">
-                                        Revoke
-                                    </a>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+                            <!-- Scopes -->
+                            <td style="vertical-align: middle;">
+                                <span v-if="token.scopes.length > 0">
+                                    {{ token.scopes.join(', ') }}
+                                </span>
+                            </td>
+
+                            <!-- Revoke Button -->
+                            <td style="vertical-align: middle;">
+                                <a class="action-link text-danger" @click="revoke(token)">
+                                    Revocar
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>

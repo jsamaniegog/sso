@@ -14,10 +14,15 @@
                         </div>
                     @endif
 
+                    @if(Auth::user()->hasRole('admin'))
                     <passport-clients></passport-clients>
                     <br>
+                    @endif
                     <passport-authorized-clients></passport-authorized-clients>
+                    @if(Auth::user()->hasRole('admin'))
+                    <br>
                     <passport-personal-access-tokens></passport-personal-access-tokens>
+                    @endif
                 </div>
             </div>
         </div>
